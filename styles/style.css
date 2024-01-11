@@ -5,6 +5,10 @@ html {
     
 }
 
+body {
+ background-image: url('images/logo.png');
+}
+
 img {
     width: 100px;
     display: block;
@@ -60,6 +64,11 @@ ul {
     padding:0;
     margin:0;
     list-style: none;
+}
+
+li li {
+    font-size: .8em;
+    margin-left: 5px;
 }
 
 hgroup{
@@ -119,6 +128,5 @@ hgroup:hover{
 
 #l {
     grid-area: l;
-    overflow: scroll;
-    columns: 60px;
+    background-image: image();
 }
