@@ -6,7 +6,10 @@ html {
 }
 
 body {
- background-image: url('images/logo.png');
+ background-image: url('/images/background-blue-code.png');
+ background-repeat: no-repeat repeat;
+ background-position: center;
+ background-size: 100vw;
 }
 
 img {
@@ -15,16 +18,37 @@ img {
     margin: 0 auto;
 }
 
-h3 {
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
+.logos {
+    display: flex;
+}
+
+.logo{
+    width: 50px;
+    padding: 5px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 35px;
+    margin: 11px;
     text-align: center;
     font-weight: bold;
+    background: -webkit-linear-gradient(115deg, rgb(0, 229, 255),rgb(33, 113, 193));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(0, 0, 0);  
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: -webkit-linear-gradient(115deg, rgb(0, 229, 255),rgb(33, 113, 193));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 40px rgb(0, 119, 255);
 }
 
 a[href] {
@@ -79,54 +103,57 @@ hgroup{
 
 hgroup:hover{
     transform: rotate3d(2, 0, 0, 20deg);
-    background-image: linear-gradient(45deg, rgb(255, 227, 167), rgb(197, 253, 164));
+    background-image: linear-gradient(45deg, rgb(167, 242, 255), rgb(164, 168, 253)) !important;
+    box-shadow: 0px 0px 30px rgb(90, 101, 216);
 }
 
-#a {
+.box-a {
     grid-area: a;
 }
 
-#b {
+.box-b {
     grid-area: b;
 }
 
-#c {
+.box-c {
     grid-area: c;
 }
 
-#d {
+.box-d {
     grid-area: d;
 }
 
-#e {
+.box-e {
     grid-area: e;
 }
 
-#f {
+.box-f {
     grid-area: f;
 }
 
-#g {
+.box-g {
     grid-area: g;
 }
 
-#h {
+.box-h {
     grid-area: h;
 }
 
-#i {
+.box-i {
     grid-area: i;
 }
 
-#j {
+.box-j {
     grid-area: j;
 }
 
-#k {
+.box-k {
     grid-area: k;
 }
 
-#l {
+.box-l {
     grid-area: l;
-    background-image: image();
+    background-image: url('/images/background-code.png');
+    background-size: cover;
+    color: white;
 }
