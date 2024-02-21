@@ -32,7 +32,7 @@ h1 {
     margin: 11px;
     text-align: center;
     font-weight: bold;
-    background: -webkit-linear-gradient(115deg, rgb(0, 229, 255),rgb(33, 113, 193));
+    background: -webkit-linear-gradient(115deg, rgb(170, 0, 255),rgb(41, 8, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: rgb(0, 0, 0);  
@@ -44,11 +44,11 @@ h3 {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
-    background: -webkit-linear-gradient(115deg, rgb(0, 229, 255),rgb(33, 113, 193));
+    background: -webkit-linear-gradient(115deg, rgb(204, 0, 255),rgb(0, 30, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 40px rgb(0, 119, 255);
+    text-shadow: 0px 0px 40px rgb(26, 255, 0);
 }
 
 a[href] {
@@ -96,15 +96,16 @@ li li {
 }
 
 hgroup{
-    background-color: rgb(220, 220, 220);
+    background-color: rgba(220, 220, 220, 0.5);
     padding: 10px;
     border-radius: 20px;
+    box-shadow: 5px;
 }
 
 hgroup:hover{
-    transform: rotate3d(2, 0, 0, 20deg);
-    background-image: linear-gradient(45deg, rgb(167, 242, 255), rgb(164, 168, 253)) !important;
-    box-shadow: 0px 0px 30px rgb(90, 101, 216);
+    transform: scale(1.1);
+    background-image: linear-gradient(45deg, rgba(167, 242, 255, 0.5), rgba(164, 168, 253, 0.5)) !important;
+    box-shadow: 0px 0px 30px rgb(164, 0, 240);
 }
 
 .box-a {
