@@ -4,6 +4,9 @@ html {
     font-family: "Poppins", sans-serif;
     font-weight: 10;
     font-style: normal;
+    background-image: url("/images/Grey-bricks.jpg");
+    background-repeat: repeat;
+    background-size: 700px;
 }
 
 h1 {
@@ -81,6 +84,7 @@ hgroup{
     border-radius: 20px;
     box-shadow: 10px;
     overflow: scroll;
+    backdrop-filter: blur(2px) brightness(110%);
 }
 
 hgroup:hover{
