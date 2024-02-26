@@ -1,7 +1,13 @@
 html {
     background-color: white;
-    color: rgb(0, 0, 0);
-    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "XROT" 0,
+        "YROT" 0;
     font-weight: 10;
     font-style: normal;
     background-image: url("/images/Grey-bricks.jpg");
@@ -11,22 +17,31 @@ html {
 
 .background-darkness {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.83);
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     border: 0;
+    left: 0;
     z-index: 2;
     top: 0;
+
+    &.vertical {
+        background: linear-gradient(to top, black, rgba(0, 0, 0, 0.4) 50%, black);
+    }
+
+    &.horizontal {
+        background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4) 50%, black);
+    }
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 30px;
     margin: 11px;
     text-align: center;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px magenta;
 }
 
 h3 {
@@ -36,8 +51,7 @@ h3 {
     margin-top: 5px;
     margin-bottom: 5px;
     color: rgb(255, 255, 255);
-    filter: drop-shadow(0 0 25px #e00dd966);
-    text-shadow: 0px 0px 15px rgb(41, 1, 174);
+    text-shadow: 0 0 15px rgb(174, 1, 157);
 }
 
 a[href] {
@@ -87,24 +101,27 @@ li li {
 }
 
 hgroup{
-    background-color: rgba(220, 220, 220, 0.5);
+    background-color: rgba(220, 220, 220, 0);
     padding: 10px;
     border-radius: 20px;
     box-shadow: 10px;
     overflow: scroll;
-    backdrop-filter: blur(2px) brightness(110%);
+    backdrop-filter: (blur 2px);
     border-width: 3px;
     border-style: solid;
     border-color: white;
     filter: drop-shadow(0 0 15px #e00dd966);
-    box-shadow: 0px 0px 30px rgb(164, 0, 240);
+    box-shadow: 
+        0 0 30px rgb(164, 0, 240),
+        inset 0 0 30px rgb(164, 0, 240);
 }
 
 hgroup:hover{
     transform: scale(1.03);
-    box-shadow: 0px 0px 20px rgb(0, 240, 32);
+    box-shadow: 
+    0px 0px 20px rgb(0, 240, 32),
+    inset 0px 0px 20px rgb(0, 240, 32);
     text-shadow: 0px 0px 20px rgb(0, 255, 55);
-    filter: drop-shadow(0 0 25px #0de05366);
     z-index: 5;
 }
 
@@ -147,6 +164,9 @@ hgroup:hover{
 
 .box-h {
     grid-area: h;
+    & .dark-mode {
+        filter: hue-rotate(260deg) drop-shadow(0 0 10px rgb(133, 16, 133));
+    }
 }
 
 .box-i {
@@ -156,11 +176,15 @@ hgroup:hover{
         width: 100px;
         display: block;
         margin: 0 auto;
+        filter: hue-rotate(260deg) drop-shadow(0 0 10px rgb(133, 16, 133));
     }
 }
 
 .box-j {
     grid-area: j;
+    & button {
+        filter: hue-rotate(90deg) drop-shadow(0 0 10px rgb(133, 16, 133));
+    }
 }
 
 .box-k {

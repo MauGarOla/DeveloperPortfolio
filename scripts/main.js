@@ -1,13 +1,16 @@
 const btn = document.querySelector(".dark-mode");
-const bg = document.querySelector(".background-darkness");
+const bgh = document.querySelector(".background-darkness.horizontal");
+const bgv = document.querySelector(".background-darkness.vertical");
 
 btn.addEventListener("click",bgColor)
 
 function bgColor() {
-    if (bg.style.visibility === "hidden") {
-        bg.style.visibility = "visible";
+    if (bgh.style.visibility === "hidden") {
+        bgh.style.visibility = "visible";
+        bgv.style.visibility = "visible";
     } else {
-        bg.style.visibility = "hidden";
+        bgh.style.visibility = "hidden";
+        bgv.style.visibility = "hidden";
     }
 }
 
