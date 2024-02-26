@@ -1,6 +1,11 @@
+:root {
+    --main-color: magenta;
+    --second-color: green;
+}
+
+
 html {
-    background-color: white;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: "Tilt Neon", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -36,12 +41,10 @@ html {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin: 11px;
     text-align: center;
     font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 15px magenta;
 }
 
 h3 {
@@ -50,13 +53,6 @@ h3 {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 15px rgb(174, 1, 157);
-}
-
-a[href] {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
 }
 
 .container {
@@ -64,7 +60,6 @@ a[href] {
     z-index: 3;
     display: grid;
     margin-top: 50px;
-    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
     grid-template-columns: repeat(8, 60px);
     grid-auto-rows: 60px;
     gap: 10px;
@@ -85,7 +80,7 @@ a[href] {
 button {
     text-align: center;
     font-size: 28px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     border-style: none;
 }
 
@@ -93,35 +88,52 @@ ul {
     padding:0;
     margin:0;
     list-style: none;
+    
+    & li li {
+        font-size: .8em;
+        margin-left: 5px;
+    }
 }
 
-li li {
-    font-size: .8em;
-    margin-left: 5px;
-}
-
-hgroup{
-    background-color: rgba(220, 220, 220, 0);
+.dark-hover {
+    background-color: transparent;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 10px;
     overflow: scroll;
-    backdrop-filter: (blur 2px);
+    backdrop-filter: blur(1px);
     border-width: 3px;
     border-style: solid;
     border-color: white;
-    filter: drop-shadow(0 0 15px #e00dd966);
     box-shadow: 
-        0 0 30px rgb(164, 0, 240),
-        inset 0 0 30px rgb(164, 0, 240);
+        0 0 30px var(--main-color),
+        inset 0 0 30px var(--main-color);
+    text-shadow: 0 0 20px var(--main-color);
 }
 
-hgroup:hover{
+.dark-hover:hover {
     transform: scale(1.03);
     box-shadow: 
-    0px 0px 20px rgb(0, 240, 32),
-    inset 0px 0px 20px rgb(0, 240, 32);
-    text-shadow: 0px 0px 20px rgb(0, 255, 55);
+        0px 0px 20px var(--second-color),
+        inset 0px 0px 20px var(--second-color);
+    text-shadow: 0px 0px 20px var(--second-color);
+    z-index: 5;
+}
+
+.light-hover {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px;
+    overflow: scroll;
+    backdrop-filter: blur(3px);
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+.light-hover:hover {
+    transform: scale(1.03);
     z-index: 5;
 }
 
@@ -134,6 +146,20 @@ hgroup:hover{
         & .logo{
             width: 50px;
             padding: 5px;
+
+            &.email {
+                filter: hue-rotate(90deg);
+            }
+
+            &.linkedin {
+                filter: hue-rotate(90deg);
+            }
+
+            &.phone {
+                transform: scale(1.2);
+                filter: invert(22%) sepia(99%) saturate(6042%) hue-rotate(314deg) brightness(99%) contrast(112%);
+            }
+
         }
     }
 }
